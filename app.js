@@ -37,3 +37,31 @@ for(i = numb.length -1; i >= 0; i--) {
 }
 
 console.log(rev); // (6) [6, 5, 4, 3, 2, 1]
+
+
+
+
+// 4. Flatten a nested array (up to 2 levels deep) into a single array without using flat().
+
+let deeplyNested = [1, [2, 3], [4, [5, 6]]];
+
+
+let result = []
+
+for (i = 0; i < deeplyNested.length; i++) {
+    if (Array.isArray(deeplyNested[i])) {
+        for (j = 0; j < deeplyNested[i].length; j++) {
+            if (Array.isArray(deeplyNested[i][j])) {
+                for (k = 0; k < deeplyNested[i][j].length; k++) {
+                    result.push(deeplyNested[i][j][k])
+                }
+            } else {
+                result.push(deeplyNested[i][j]);
+            }
+        }
+    } else {
+        result.push(deeplyNested[i]);
+    }
+}
+
+console.log(result);
