@@ -23,3 +23,17 @@ let unique = merged.filter((n, i) => {
 
 
 console.log(unique.sort()); // (6) [1, 2, 3, 4, 5, 6]
+
+
+
+// 3. Reverse an array without using the built-in reverse() method.
+
+let numb = [1, 2, 3, 4, 5, 6]
+
+let rev =[]
+
+for(i = numb.length -1; i >= 0; i--) {
+    rev.push(numb[i]);
+}
+
+console.log(rev); // (6) [6, 5, 4, 3, 2, 1]
