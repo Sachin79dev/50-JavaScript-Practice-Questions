@@ -65,3 +65,18 @@ for (i = 0; i < deeplyNested.length; i++) {
 }
 
 console.log(result);
+
+
+
+
+// 5. Find the maximum and minimum values in a numeric array.
+
+
+let num = [99, 44, 89, 0, 11, 22, 33, 66]
+
+
+let max = Math.max(...num)
+let min = Math.min(...num)
+
+console.log(max); // 99
+console.log(min); // 0
