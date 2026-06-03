@@ -80,3 +80,32 @@ let min = Math.min(...num)
 
 console.log(max); // 99
 console.log(min); // 0
+
+
+
+
+
+// 6. Group an array of objects by a given property (e.g. group students by grade).
+
+
+const students = [
+  { name: "Alice", grade: "A" },
+  { name: "Bob", grade: "B" },
+  { name: "Charlie", grade: "A" },
+  { name: "David", grade: "B" },
+  { name: "Eve", grade: "C" }
+];
+
+const grouped = students.reduce((acc, student) => {
+  const key = student.grade;
+
+  if (!acc[key]) {
+    acc[key] = [];
+  }
+
+  acc[key].push(student);
+
+  return acc;
+}, {});
+
+console.log(grouped);
