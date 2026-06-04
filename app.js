@@ -109,3 +109,20 @@ const grouped = students.reduce((acc, student) => {
 }, {});
 
 console.log(grouped);
+
+
+
+// 7. Count how many times a specific value appears in an array.
+
+
+let arr = [1, 2, 3, 2, 3, 3, 4]
+
+count = {};
+
+
+arr.forEach((n, i) => {
+    count[n] = (count[n] || 0) + 1
+})
+
+
+console.log(count);
